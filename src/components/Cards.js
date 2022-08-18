@@ -37,21 +37,6 @@ export default function Cards(props) {
                                         return val;
                                     }
                                 })
-                                // .filter((items) => {
-                                //     if ((props && props.searchText) === undefined) {
-                                //         return items
-                                //     }
-                                //     if (items.title.toLowerCase().includes(props && props.searchText && props.searchText.toLowerCase())) {
-                                //         // console.log(props.searchText.toLowerCase())
-                                //         return items
-                                //         // console.log((items.title).toLowerCase())
-                                //     }
-                                //val.title
-                                // .toLowerCase()
-                                //             .includes(props.search && props.search.toLowerCase())
-                                //(items.title).toLowerCase().includes(props.searchText.toLowerCase())
-                                //(items.title).toLowerCase().localeCompare(props.searchText.toLowerCase())
-                                // })
                                 .map((val, key) => {
                                     return (
                                         <>
