@@ -34,117 +34,51 @@ export default function SignUp() {
                             </div>
                             {/* country dropdown */}
                             <div className="mb-6">
-                                <div className='flex justify-start'>
-                                    <div className='mr-8'>
-                                        <div className='dropdown relative'>
-                                            <a
-                                                className='dropdown-toggle px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg active:text-white transition duration-150 ease-in-out flex items-center whitespace-nowrap'
-                                                href='/'
-                                                type='button'
-                                                id='dropdownMenuButton2'
-                                                data-bs-toggle='dropdown'
-                                                aria-expanded='false'
-                                            >
-                                                Country
-
-                                            </a>
-                                            <ul
-                                                className='dropdown-menu min-w-max absolute hidden bg-white text-base z-50 float-left py-2 list-none text-left rounded-lg shadow-lg mt-1 hidden m-0 bg-clip-padding border-none'
-                                                aria-labelledby='dropdownMenuButton2'
-                                            >
-                                                <li>
-                                                    <a
-                                                        className='dropdown-item text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-gray-700 hover:bg-gray-100'
-                                                        href='/'
-                                                    >
-                                                        India
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a
-                                                        className='dropdown-item text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-gray-700 hover:bg-gray-100'
-                                                        href='/'
-                                                    >
-                                                        China
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a
-                                                        className='dropdown-item text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-gray-700 hover:bg-gray-100'
-                                                        href='/'
-                                                    >
-                                                        United State
-                                                    </a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div className='ml-8' >
-                                        <div className='dropdown relative'>
-                                            <a
-                                                className='dropdown-toggle px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg active:text-white transition duration-150 ease-in-out flex items-center whitespace-nowrap'
-                                                href='/'
-                                                type='button'
-                                                id='dropdownMenuButton2'
-                                                data-bs-toggle='dropdown'
-                                                aria-expanded='false'
-                                            >
-                                                State
-
-                                            </a>
-                                            <ul
-                                                className='dropdown-menu min-w-max absolute hidden bg-white text-base z-50 float-left py-2 list-none text-left rounded-lg shadow-lg mt-1 hidden m-0 bg-clip-padding border-none'
-                                                aria-labelledby='dropdownMenuButton2'
-                                            >
-                                                <li>
-
-                                                    Maharashtra
-
-                                                </li>
-                                                <li>
-
-                                                    Goa
-
-                                                </li>
-                                                <li>
-
-                                                    Gujrat
-
-                                                </li>
-                                                <li>
-
-                                                    Shangai
-
-                                                </li>
-                                                <li>
-
-                                                    Hubei
-
-
-
-                                                </li>
-                                                <li>
-
-                                                    California
-
-
-
-                                                </li>
-                                                <li>
-                                                    Ohio
-
-                                                </li>
-                                                <li>
-                                                    England
-                                                </li>
-                                            </ul>
-                                        </div>
+                                <div className="inline-block relative w-64">
+                                    <select className="block appearance-none w-full bg-white border border-gray-400 hover:border-gray-500 px-4 py-2 pr-8 rounded shadow leading-tight focus:outline-none focus:shadow-outline">
+                                        <option>Country</option>
+                                        <option>India</option>
+                                        <option>US</option>
+                                        <option>UK</option>
+                                        <option>Sri-Lanka</option>
+                                    </select>
+                                    <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+                                        <svg
+                                            className="fill-current h-4 w-4"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            viewBox="0 0 20 20"
+                                        >
+                                            <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
+                                        </svg>
                                     </div>
                                 </div>
                             </div>
                             {/* country dropdown */}
                             {/* state dropdown */}
                             <div className="mb-6">
+                                <div className="inline-block relative w-64">
+                                    <select className="block appearance-none w-full bg-white border border-gray-400 hover:border-gray-500 px-4 py-2 pr-8 rounded shadow leading-tight focus:outline-none focus:shadow-outline">
+                                        <option>State</option>
+                                        <option>Maharashtra</option>
+                                        <option>Gujrat</option>
+                                        <option>Shangai</option>
+                                        <option>Hubei</option>
+                                        <option>Ohio</option>
+                                        <option>California</option>
+                                        <option>England</option>
+                                        <option>Scotland</option>
+                                        <option>Wales</option>
+                                    </select>
+                                    <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+                                        <svg
+                                            className="fill-current h-4 w-4"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            viewBox="0 0 20 20"
+                                        >
+                                            <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
+                                        </svg>
+                                    </div>
+                                </div>
 
                             </div>
                             {/* state dropdown */}
