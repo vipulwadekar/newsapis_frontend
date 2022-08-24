@@ -7,6 +7,9 @@ import axios from "axios";
 import { useEffect, useState } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import LandingPage from './components/LandingPage';
+import SignUp from './components/SignUp';
+import SignIn from './components/SignIn';
+
 
 function App() {
   const [businessData, setBusinessData] = useState([]);
@@ -18,25 +21,28 @@ function App() {
 
   // axios.get(`https://newsapi.org/v2/top-headlines/sources?category=businessapiKey=${API_KEY}`)
   const getBusinessNews = async () => {
-    // const response = await axios.get(`https://newsapi.org/v2/top-headlines?country=in&category=business&apiKey=${API_KEY}`)
-    // setBusinessData(response.data.articles)
+    const response = await axios.get(`http://127.0.0.1:8000/news-api`)
+    console.log("===========", response)
+    // setBusinessData(response)
+
+    setBusinessData(response.data.Newsdata)
     // localStorage.setItem('businessData', JSON.stringify(response.data.articles))
 
     // console.log("Business_data", response.data.articles)
-    const items = JSON.parse(localStorage.getItem('businessData'));
-    if (items) {
-      setBusinessData(items);
-    }
+    // const items = JSON.parse(localStorage.getItem('businessData'));
+    // if (items) {
+    //   setBusinessData(items);
+    // }
   }
   const getEntertainmentNews = async () => {
     // const { data } = await axios.get(`https://newsapi.org/v2/top-headlines?country=in&category=entertainment&apiKey=${API_KEY}`)
     // setEntertainmentData(data.articles)
     // localStorage.setItem('entertainmentData', JSON.stringify(data.articles))
     // console.log("Entertainement_data.articles", data.articles)
-    const items = JSON.parse(localStorage.getItem('entertainmentData'));
-    if (items) {
-      setEntertainmentData(items);
-    }
+    // const items = JSON.parse(localStorage.getItem('entertainmentData'));
+    // if (items) {
+    //   setEntertainmentData(items);
+    // }
   }
 
   const getTechnologyNews = async () => {
@@ -52,8 +58,8 @@ function App() {
   useEffect(() => {
 
     getBusinessNews();
-    getEntertainmentNews();
-    getTechnologyNews()
+    // getEntertainmentNews();
+    // getTechnologyNews()
   }, [])
 
 
@@ -70,6 +76,8 @@ function App() {
         <Route path='/technology' element={<Cards businessData={technologyData} searchText={searchText} name="Technology" />} />
         {/* <Route path='/LandingPage/<id>' element={<LandingPage landingData={landingData} />} /> */}
         <Route path='/LandingPage/:id' element={<LandingPage />} />
+        <Route path="/Sign-in" element={<SignIn />}></Route>
+        <Route path="/Sign-up" element={<SignUp />}></Route>
       </Routes>
 
 
